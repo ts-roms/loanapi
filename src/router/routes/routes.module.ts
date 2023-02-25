@@ -7,6 +7,7 @@ import { SettingController } from 'src/common/setting/controllers/setting.contro
 import { HealthController } from 'src/health/controllers/health.controller';
 import { HealthModule } from 'src/health/health.module';
 import { ConfigurationModule } from 'src/modules/configurations/configuration.module';
+import { BranchController } from 'src/modules/configurations/controllers/branch.controller';
 import { EmployeeController } from 'src/modules/configurations/controllers/employee.controller';
 import { RoleModule } from 'src/modules/role/role.module';
 import { UserController } from 'src/modules/user/controllers/user.controller';
@@ -18,7 +19,8 @@ import { UserModule } from 'src/modules/user/user.module';
     SettingController,
     UserController,
     MessageController,
-    EmployeeController
+    EmployeeController,
+    BranchController
   ],
   providers: [],
   exports: [],

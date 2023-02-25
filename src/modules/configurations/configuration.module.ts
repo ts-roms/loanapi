@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { RepositoryModule } from './repository/repository.module';
+import { BranchService } from './services/branch.service';
 import { EmployeeService } from './services/employee.service';
 
 @Module({
@@ -7,10 +8,12 @@ import { EmployeeService } from './services/employee.service';
     RepositoryModule
   ],
   exports: [
-    EmployeeService
+    EmployeeService,
+    BranchService
   ],
   providers: [
-    EmployeeService
+    EmployeeService,
+    BranchService
   ],
   controllers: []
 })
