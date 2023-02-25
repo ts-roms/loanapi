@@ -5,24 +5,24 @@ import { PaginationService } from 'src/common/pagination/services/pagination.ser
 
 @Injectable()
 export class PaginationFilterEqualObjectIdPipe implements PipeTransform {
-    constructor(private readonly paginationService: PaginationService) {}
+  constructor(private readonly paginationService: PaginationService) {}
 
-    async transform(
-        value: string,
-        { data: field }: ArgumentMetadata
-    ): Promise<Record<string, Types.ObjectId | string>> {
-        if (!value) {
-            return undefined;
-        }
-
-        value = value.trim();
-        const finalValue = Types.ObjectId.isValid(value)
-            ? new Types.ObjectId(value)
-            : value;
-
-        return this.paginationService.filterEqual<Types.ObjectId | string>(
-            field,
-            finalValue
-        );
+  async transform(
+    value: string,
+    { data: field }: ArgumentMetadata
+  ): Promise<Record<string, Types.ObjectId | string>> {
+    if (!value) {
+      return undefined;
     }
+
+    value = value.trim();
+    const finalValue = Types.ObjectId.isValid(value)
+      ? new Types.ObjectId(value)
+      : value;
+
+    return this.paginationService.filterEqual<Types.ObjectId | string>(
+      field,
+      finalValue
+    );
+  }
 }
