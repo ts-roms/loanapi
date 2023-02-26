@@ -10,6 +10,7 @@ import { ConfigurationModule } from 'src/modules/configurations/configuration.mo
 import { AccountingController } from 'src/modules/configurations/controllers/accounting.controller';
 import { BranchController } from 'src/modules/configurations/controllers/branch.controller';
 import { EmployeeController } from 'src/modules/configurations/controllers/employee.controller';
+import { ExpenseConfigController } from 'src/modules/configurations/controllers/expenses.controller';
 import { RoleModule } from 'src/modules/role/role.module';
 import { UserController } from 'src/modules/user/controllers/user.controller';
 import { UserModule } from 'src/modules/user/user.module';
@@ -22,7 +23,8 @@ import { UserModule } from 'src/modules/user/user.module';
     MessageController,
     EmployeeController,
     BranchController,
-    AccountingController
+    AccountingController,
+    ExpenseConfigController
   ],
   providers: [],
   exports: [],

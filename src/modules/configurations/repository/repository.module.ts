@@ -6,11 +6,13 @@ import { COAEntity, COASchema } from './entities/coa.entity';
 import { ContactDetailsEntity, ContactDetailsSchema } from './entities/contact-details.entity';
 import { EmployeeEntity, EmployeeSchema } from './entities/employee.entity';
 import { EmploymentEntity, EmploymentSchema } from './entities/employment.entity';
+import { ExpenseConfigEntity, ExpenseConfigSchema } from './entities/expenses.entity';
 import { BranchRepository } from './repositories/branch.repository';
 import { COARepository } from './repositories/coa.repository';
 import { ContactDetailsRepository } from './repositories/contact-details.repository';
 import { EmployeeRepository } from './repositories/employee.repository';
 import { EmploymentRepository } from './repositories/employment.repository';
+import { ExpenseConfigRepository } from './repositories/expenses.repository';
 
 @Module({
   providers: [
@@ -18,14 +20,16 @@ import { EmploymentRepository } from './repositories/employment.repository';
     ContactDetailsRepository,
     EmploymentRepository,
     BranchRepository,
-    COARepository
+    COARepository,
+    ExpenseConfigRepository
   ],
   exports: [
     EmployeeRepository,
     ContactDetailsRepository,
     EmploymentRepository,
     BranchRepository,
-    COARepository
+    COARepository,
+    ExpenseConfigRepository
   ],
   controllers: [],
   imports: [
@@ -50,6 +54,10 @@ import { EmploymentRepository } from './repositories/employment.repository';
         {
           name: COAEntity.name,
           schema: COASchema
+        },
+        {
+          name: ExpenseConfigEntity.name,
+          schema: ExpenseConfigSchema
         }
       ],
       DATABASE_CONNECTION_NAME

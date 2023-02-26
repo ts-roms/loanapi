@@ -8,7 +8,7 @@ export class COADto {
 
   @ApiProperty({
     required: true,
-    example: 'Expenses'
+    example: 'Expense'
   })
   @IsNotEmpty()
   @IsString()
@@ -26,7 +26,7 @@ export class COADto {
 
   @ApiProperty({
     required: true,
-    example: 'Expenses'
+    example: 'Expense'
   })
   @IsNotEmpty()
   @IsString()
