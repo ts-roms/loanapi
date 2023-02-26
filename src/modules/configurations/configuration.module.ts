@@ -4,6 +4,7 @@ import { BranchService } from './services/branch.service';
 import { COAService } from './services/coa.service';
 import { EmployeeService } from './services/employee.service';
 import { ExpenseConfigService } from './services/expense.service';
+import { OtherIncomeConfigService } from './services/other-income.service';
 
 @Module({
   imports: [
@@ -13,13 +14,15 @@ import { ExpenseConfigService } from './services/expense.service';
     EmployeeService,
     BranchService,
     COAService,
-    ExpenseConfigService
+    ExpenseConfigService,
+    OtherIncomeConfigService
   ],
   providers: [
     EmployeeService,
     BranchService,
     COAService,
-    ExpenseConfigService
+    ExpenseConfigService,
+    OtherIncomeConfigService
   ],
   controllers: []
 })

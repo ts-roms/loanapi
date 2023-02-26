@@ -11,6 +11,7 @@ import { AccountingController } from 'src/modules/configurations/controllers/acc
 import { BranchController } from 'src/modules/configurations/controllers/branch.controller';
 import { EmployeeController } from 'src/modules/configurations/controllers/employee.controller';
 import { ExpenseConfigController } from 'src/modules/configurations/controllers/expenses.controller';
+import { OtherIncomeConfigController } from 'src/modules/configurations/controllers/other-income.controller';
 import { RoleModule } from 'src/modules/role/role.module';
 import { UserController } from 'src/modules/user/controllers/user.controller';
 import { UserModule } from 'src/modules/user/user.module';
@@ -24,7 +25,8 @@ import { UserModule } from 'src/modules/user/user.module';
     EmployeeController,
     BranchController,
     AccountingController,
-    ExpenseConfigController
+    ExpenseConfigController,
+    OtherIncomeConfigController
   ],
   providers: [],
   exports: [],
