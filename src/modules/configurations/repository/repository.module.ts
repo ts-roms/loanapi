@@ -2,10 +2,12 @@ import { Module } from '@nestjs/common'
 import { MongooseModule } from '@nestjs/mongoose';
 import { DATABASE_CONNECTION_NAME } from 'src/common/database/constants/database.constant';
 import { BranchEntity, BranchSchema } from './entities/branch.entity';
+import { COAEntity, COASchema } from './entities/coa.entity';
 import { ContactDetailsEntity, ContactDetailsSchema } from './entities/contact-details.entity';
 import { EmployeeEntity, EmployeeSchema } from './entities/employee.entity';
 import { EmploymentEntity, EmploymentSchema } from './entities/employment.entity';
 import { BranchRepository } from './repositories/branch.repository';
+import { COARepository } from './repositories/coa.repository';
 import { ContactDetailsRepository } from './repositories/contact-details.repository';
 import { EmployeeRepository } from './repositories/employee.repository';
 import { EmploymentRepository } from './repositories/employment.repository';
@@ -15,13 +17,15 @@ import { EmploymentRepository } from './repositories/employment.repository';
     EmployeeRepository,
     ContactDetailsRepository,
     EmploymentRepository,
-    BranchRepository
+    BranchRepository,
+    COARepository
   ],
   exports: [
     EmployeeRepository,
     ContactDetailsRepository,
     EmploymentRepository,
-    BranchRepository
+    BranchRepository,
+    COARepository
   ],
   controllers: [],
   imports: [
@@ -42,6 +46,10 @@ import { EmploymentRepository } from './repositories/employment.repository';
         {
           name: BranchEntity.name,
           schema: BranchSchema
+        },
+        {
+          name: COAEntity.name,
+          schema: COASchema
         }
       ],
       DATABASE_CONNECTION_NAME

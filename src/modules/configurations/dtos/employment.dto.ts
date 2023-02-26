@@ -7,7 +7,7 @@ import { IsNotEmpty, IsString } from "class-validator";
 export class EmploymentDto {
   @ApiProperty({
     required: true,
-    example: faker.internet.mac()
+    example: faker.datatype.uuid(),
   })
   @IsNotEmpty()
   @IsString()
@@ -25,7 +25,7 @@ export class EmploymentDto {
 
   @ApiProperty({
     required: true,
-    example: faker.internet.mac()
+    example: faker.datatype.uuid(),
   })
   @IsNotEmpty()
   @IsString()
@@ -34,7 +34,7 @@ export class EmploymentDto {
 
   @ApiProperty({
     required: true,
-    example: faker.internet.mac()
+    example: faker.datatype.uuid(),
   })
   @IsNotEmpty()
   @IsString()

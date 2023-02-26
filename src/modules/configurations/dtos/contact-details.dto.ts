@@ -8,7 +8,7 @@ export class ContactDetailsDto {
 
   @ApiProperty({
     required: true,
-    example: faker.internet.mac()
+    example: faker.datatype.uuid(),
   })
   @IsNotEmpty()
   @IsString()
