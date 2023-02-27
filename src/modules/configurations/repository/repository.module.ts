@@ -4,6 +4,7 @@ import { DATABASE_CONNECTION_NAME } from 'src/common/database/constants/database
 import { BranchEntity, BranchSchema } from './entities/branch.entity';
 import { COAEntity, COASchema } from './entities/coa.entity';
 import { ContactDetailsEntity, ContactDetailsSchema } from './entities/contact-details.entity';
+import { CustomFieldsEntity, CustomFieldsSchema } from './entities/custom-fields.entity';
 import { EmployeeEntity, EmployeeSchema } from './entities/employee.entity';
 import { EmploymentEntity, EmploymentSchema } from './entities/employment.entity';
 import { ExpenseConfigEntity, ExpenseConfigSchema } from './entities/expenses.entity';
@@ -11,6 +12,7 @@ import { OtherIncomeConfigEntity, OtherIncomeConfigSchema } from './entities/oth
 import { BranchRepository } from './repositories/branch.repository';
 import { COARepository } from './repositories/coa.repository';
 import { ContactDetailsRepository } from './repositories/contact-details.repository';
+import { CustomFieldsRepository } from './repositories/custom-fields.repository';
 import { EmployeeRepository } from './repositories/employee.repository';
 import { EmploymentRepository } from './repositories/employment.repository';
 import { ExpenseConfigRepository } from './repositories/expenses.repository';
@@ -24,7 +26,8 @@ import { OtherIncomeConfigRepository } from './repositories/other-income.reposit
     BranchRepository,
     COARepository,
     ExpenseConfigRepository,
-    OtherIncomeConfigRepository
+    OtherIncomeConfigRepository,
+    CustomFieldsRepository
   ],
   exports: [
     EmployeeRepository,
@@ -33,7 +36,8 @@ import { OtherIncomeConfigRepository } from './repositories/other-income.reposit
     BranchRepository,
     COARepository,
     ExpenseConfigRepository,
-    OtherIncomeConfigRepository
+    OtherIncomeConfigRepository,
+    CustomFieldsRepository
   ],
   controllers: [],
   imports: [
@@ -66,6 +70,10 @@ import { OtherIncomeConfigRepository } from './repositories/other-income.reposit
         {
           name: OtherIncomeConfigEntity.name,
           schema: OtherIncomeConfigSchema
+        },
+        {
+          name: CustomFieldsEntity.name,
+          schema: CustomFieldsSchema
         }
       ],
       DATABASE_CONNECTION_NAME

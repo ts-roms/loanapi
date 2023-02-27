@@ -9,6 +9,7 @@ import { HealthModule } from 'src/health/health.module';
 import { ConfigurationModule } from 'src/modules/configurations/configuration.module';
 import { AccountingController } from 'src/modules/configurations/controllers/accounting.controller';
 import { BranchController } from 'src/modules/configurations/controllers/branch.controller';
+import { CustomFieldsController } from 'src/modules/configurations/controllers/custom-fields.controller';
 import { EmployeeController } from 'src/modules/configurations/controllers/employee.controller';
 import { ExpenseConfigController } from 'src/modules/configurations/controllers/expenses.controller';
 import { OtherIncomeConfigController } from 'src/modules/configurations/controllers/other-income.controller';
@@ -26,7 +27,8 @@ import { UserModule } from 'src/modules/user/user.module';
     BranchController,
     AccountingController,
     ExpenseConfigController,
-    OtherIncomeConfigController
+    OtherIncomeConfigController,
+    CustomFieldsController
   ],
   providers: [],
   exports: [],
